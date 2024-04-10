@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.all__container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background: rgb(75, 15, 185);
+}
+
+aside {
+  padding: 2rem;
+  padding-right: 0;
+  color: rgb(247, 243, 243);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title__main {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.boton__menu {
+  background: transparent;
+  border: 0;
+  color: rgb(245, 239, 239);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  font-weight: 600;
+  padding: 0.85rem;
+  font-size: 0.85rem;
+}
+
+.boton__menu.active {
+  background: rgb(241, 238, 238);
+  color: rgb(75, 15, 185);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  position: relative;
+}
+
+.boton__menu.active::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 2rem;
+  bottom: 100%;
+  right: 0;
+  background: transparent;
+  border-bottom-right-radius: 0.5rem;
+  box-shadow: 0 1rem 0 rgb(241, 239, 239);
+}
+
+.boton__menu.active::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 2rem;
+  top: 100%;
+  right: 0;
+  background: transparent;
+  border-top-right-radius: 0.5rem;
+  box-shadow: 0 -1rem 0 rgb(241, 239, 239);
+}
+
+.bi-hand-index-thumb-fill,
+.bi-hand-index-thumb {
+  transform: rotateZ(90deg);
+}
+
+.boton__carrito {
+  margin-top: 2rem;
+}
+
+.numerito {
+  background: rgb(223, 220, 220);
+  color: rgb(75, 15, 185);
+  padding: 0.15rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.boton__carrito.active .numerito {
+  background: rgb(75, 15, 185);
+  color: rgb(223, 220, 220);
+}
+
+.text__footer {
+  color: rgb(148, 97, 243);
+  font-size: 0.85rem;
+}
+
+main {
+  background: rgb(245, 243, 243);
+  margin: 1rem;
+  margin-left: 0;
+  border-radius: 2rem;
+  padding: 3rem;
+}
+
+.title__principal {
+  color: rgb(75, 15, 185);
+  margin-bottom: 2rem;
+}
+
+.contenedor__productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.producto__img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.producto__detalles {
+  background: rgb(75, 15, 185);
+  color: rgb(247, 242, 242);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin-top: -2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.producto__title {
+  font-size: 1rem;
+}
+
+.producto__agregar {
+  border: 0;
+  background: rgb(238, 234, 234);
+  color: rgb(75, 15, 185);
+  padding: 0.4rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid rgb(247, 243, 243);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.producto__agregar:hover {
+  background: rgb(75, 15, 185);
+  color: rgb(241, 236, 236);
+}
+
+/* CARRITO */
+
+.contenedor__carrito {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.carrito__vacio,
+.carrito__comprado {
+  color: rgb(75, 15, 185);
+  /* display: none; */
+}
+
+.carrito__productos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.carrito__producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(221, 217, 217);
+  color: rgb(75, 15, 185);
+  padding: 0.5rem;
+  padding-right: 1.5rem;
+  border-radius: 1rem;
+}
+
+.carrito__producto-imgen {
+  width: 4rem;
+  border-radius: 1rem;
+}
+
+.carrito__producto smaill {
+  font-size: 0.75rem;
+}
+
+.carrito__producto-eliminar {
+  border: none;
+  background: transparent;
+  color: rgb(197, 8, 8);
+  cursor: pointer;
+}
+
+.carrito__acciones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrito__acciones-vaciar {
+  border: 0;
+  background: rgb(221, 217, 217);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: rgb(75, 15, 185);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.carrito__acciones-derecha {
+  display: flex;
+}
+
+.carrito__acciones-total {
+  display: flex;
+  background: rgb(221, 217, 217);
+  padding: 1rem;
+  color: rgb(75, 15, 185);
+  text-transform: uppercase;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  gap: 1rem;
+}
+
+.carrito__acciones-comprar {
+  border: 0;
+  background: rgb(75, 15, 185);
+  padding: 1rem;
+  color: rgb(221, 217, 217);
+  text-transform: uppercase;
+  cursor: pointer;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.disabled {
+  display: none;
+}

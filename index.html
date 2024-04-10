@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>CarpiShop</title>
+  </head>
+  <body>
+    <div class="all__container">
+      <aside>
+        <header>
+          <h1 class="title__main">CarpiShop</h1>
+        </header>
+        <nav>
+          <ul class="menu">
+            <li>
+              <button id="todos" class="boton__menu button__categorias active">
+                <i class="bi bi-hand-index-thumb-fill"></i>Todos los productos
+              </button>
+            </li>
+            <li>
+              <button id="abrigos" class="boton__menu button__categorias">
+                <i class="bi bi-hand-index-thumb"></i>Abrigos
+              </button>
+            </li>
+            <li>
+              <button id="camisetas" class="boton__menu button__categorias">
+                <i class="bi bi-hand-index-thumb"></i>Camisetas
+              </button>
+            </li>
+            <li>
+              <button id="pantalones" class="boton__menu button__categorias">
+                <i class="bi bi-hand-index-thumb"></i>Pantalones
+              </button>
+            </li>
+            <li>
+              <a href="./carrito.html" class="boton__menu boton__carrito"
+                ><i class="bi bi-cart-fill"></i>Carrito
+                <span id="numerito" class="numerito">0</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <footer>
+          <p class="text__footer">© 2024 CarpiShop</p>
+        </footer>
+      </aside>
+      <main>
+        <h2 class="title__principal" id="titulo-principal">
+          Todos los productos
+        </h2>
+        <di v id="contenedor-productos" class="contenedor__productos">
+          <!-- esto se va a rellenar con JS -->
+        </di>
+      </main>
+    </div>
+    <script src="./JS/main.js"></script>
+  </body>
+</html>
