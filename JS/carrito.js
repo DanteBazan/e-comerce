@@ -30,7 +30,7 @@ function cargarProductosCarrito() {
             class="carrito__producto-imgen"
           />
           <div class="carrito__producto-titulo">
-            <small>${producto.titulo}</small>
+            <small>Nombre</small>
             <h3>${producto.titulo}</h3>
           </div>
           <div class="carrito__producto-cantidad">
