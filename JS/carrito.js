@@ -31,7 +31,7 @@ function cargarProductosCarrito() {
           />
           <div class="carrito__producto-titulo">
             <small>${producto.titulo}</small>
-            <h3>Abrigo 01</h3>
+            <h3>${producto.titulo}</h3>
           </div>
           <div class="carrito__producto-cantidad">
             <small>Cantidad</small>
